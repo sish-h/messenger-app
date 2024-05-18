@@ -1,0 +1,38 @@
+{
+	"name": "messaging-app",
+	"private": "true",
+	"workspaces": [
+		"packages/*"
+	],
+	"version": "0.1.0",
+	"author": "Baatchia Riyadh",
+	"license": "MIT",
+	"devDependencies": {
+		"concurrently": "^7.0.0",
+		"cspell": "^5.19.3",
+		"cz-conventional-changelog": "^3.3.0",
+		"husky": "^7.0.4",
+		"lerna": "^4.0.0",
+		"lint-staged": "^12.3.7",
+		"prettier": "^2.6.1"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"scripts": {
+		"client": "yarn workspace @messaging-app/client",
+		"server": "yarn workspace @messaging-app/server",
+		"common": "yarn workspace @messaging-app/shared",
+		"build": "yarn server build && yarn client build",
+		"build:concurrent": "concurrently \"yarn server build\" \"yarn client build\" --names \"server,client\"",
+		"start": "yarn server start",
+		"start:concurrent": "concurrently \"yarn server start\" \"yarn client serve\" --names \"server,client\"",
+		"start:dev": "concurrently \"yarn server start:dev\" \"yarn client dev\" -i --names \"server,client\"",
+		"start:debug": "concurrently \"yarn server start:debug\" \"yarn client dev\" -i --names \"server,client\"",
+		"format-code": "prettier . --write --ignore-unknown",
+		"release": "lerna version --conventional-commits --create-release github",
+		"prepare": "husky install"
+	}
+}

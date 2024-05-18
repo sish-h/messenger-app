@@ -1,0 +1,21 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Attach Client",
+			"type": "firefox",
+			"request": "launch",
+			"reAttach": true,
+			"url": "http://localhost:3000",
+			"webRoot": "${workspaceFolder}/packages/client"
+		},
+		{
+			"name": "Launch Server",
+			"type": "node",
+			"request": "launch",
+			"runtimeExecutable": "yarn",
+			"runtimeArgs": ["-s", "server", "start:dev"],
+			"console": "integratedTerminal"
+		}
+	]
+}

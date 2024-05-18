@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "D:/Portable/mongodb/bin/mongod.exe --dbpath D:/dev/db-data/mongodb",
+			"label": "mongodb",
+			"detail": "start mongodb",
+			"isBackground": true,
+			"icon": { "color": "terminal.ansiGreen", "id": "database" }
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "packages/client",
+			"label": "client:dev",
+			"detail": "yarn start",
+			"isBackground": true,
+			"icon": { "color": "terminal.ansiBlue", "id": "browser" }
+		},
+		{
+			"type": "npm",
+			"script": "start:debug",
+			"path": "packages/server",
+			"label": "server:debug",
+			"detail": "yarn start:debug",
+			"isBackground": true,
+			"icon": { "color": "terminal.ansiWhite", "id": "server" }
+		},
+		{
+			"label": "start:dev",
+			"detail": "start dev env",
+			"dependsOn": ["client:dev", "server:debug", "mongodb"],
+			"icon": { "color": "terminal.ansiMagenta", "id": "debug" }
+		}
+	]
+}

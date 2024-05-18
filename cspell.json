@@ -1,0 +1,29 @@
+{
+	"$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json",
+	"ignorePaths": [
+		"node_modules",
+		"dist",
+		"build",
+		"coverage",
+		"tsconfig.json",
+		".prettierrc.json",
+		"cspell.json",
+		".gitignore"
+	],
+	"words": [
+		"baatchia",
+		"browserslist",
+		"EBADCSRFTOKEN",
+		"hookform",
+		"resave",
+		"TTFB",
+		"virtuals",
+		"vite",
+		"vitejs",
+		"webfonts",
+		"browserslist",
+		"axios",
+		"env",
+		"bgcolor"
+	]
+}

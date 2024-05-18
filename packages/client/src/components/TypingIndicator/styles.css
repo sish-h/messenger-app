@@ -1,0 +1,52 @@
+.dot-typing {
+	--typing-dots-color: #8f8f8f;
+	position: relative;
+	left: -9997px;
+	width: 8px;
+	height: 8px;
+	border-radius: 5px;
+	background-color: var(--typing-dots-color);
+	color: var(--typing-dots-color);
+	box-shadow: 9984px 0 0 0 var(--typing-dots-color),
+		9997px 0 0 0 var(--typing-dots-color),
+		10010px 0 0 0 var(--typing-dots-color);
+	animation: dotTyping 1.5s infinite linear;
+}
+
+@keyframes dotTyping {
+	0% {
+		box-shadow: 9984px 0 0 0 var(--typing-dots-color),
+			9997px 0 0 0 var(--typing-dots-color),
+			10010px 0 0 0 var(--typing-dots-color);
+	}
+	16.667% {
+		box-shadow: 9984px -10px 0 0 var(--typing-dots-color),
+			9997px 0 0 0 var(--typing-dots-color),
+			10010px 0 0 0 var(--typing-dots-color);
+	}
+	33.333% {
+		box-shadow: 9984px 0 0 0 var(--typing-dots-color),
+			9997px 0 0 0 var(--typing-dots-color),
+			10010px 0 0 0 var(--typing-dots-color);
+	}
+	50% {
+		box-shadow: 9984px 0 0 0 var(--typing-dots-color),
+			9997px -10px 0 0 var(--typing-dots-color),
+			10010px 0 0 0 var(--typing-dots-color);
+	}
+	66.667% {
+		box-shadow: 9984px 0 0 0 var(--typing-dots-color),
+			9997px 0 0 0 var(--typing-dots-color),
+			10010px 0 0 0 var(--typing-dots-color);
+	}
+	83.333% {
+		box-shadow: 9984px 0 0 0 var(--typing-dots-color),
+			9997px 0 0 0 var(--typing-dots-color),
+			10010px -10px 0 0 var(--typing-dots-color);
+	}
+	100% {
+		box-shadow: 9984px 0 0 0 var(--typing-dots-color),
+			9997px 0 0 0 var(--typing-dots-color),
+			10010px 0 0 0 var(--typing-dots-color);
+	}
+}
