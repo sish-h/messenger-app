@@ -1,43 +1,25 @@
-# <img src="./packages/client/public/logo512.png" width="24"/> Messaging app
+# Messenger App
+A simple real-time messaging app built with TypeScript.
 
-Messaging app is an instant messaging fullstack web app using web sockets
-
-<p align="center">
-    <img src="https://riyadh-dev.github.io/portfolio-website-react/images/messaging-app/4.png" width="90%"/>
-<p>
-
-**Live preview:**
-
-- [Railway](https://messaging-app.up.railway.app)
-- [Render](https://messaging-app-2b7q.onrender.com)
+## What it does
+This app allows users to send and receive messages in real-time. It's a basic implementation, but it's a great starting point for anyone looking to build a more complex messaging system.
 
 ## Installation
-
-Use the package manager [yarn](https://classic.yarnpkg.com/en/docs/install#windows-stable) project dependencies.
-
+To get started, clone the repo and install the dependencies:
 ```bash
-yarn
+git clone https://github.com/your-username/messenger-app.git
+cd messenger-app
+npm install
 ```
-
-You also need a running local instance of mongodb server, or if you are using a remote instance change the **MONGODB_URI** in .env.development
-
-`.env.development`
-
-```.env
-MONGODB_URI=<past your uri here>
-```
-
-## Usage
-
+## Running the App
+To start the app, simply run:
 ```bash
-# start dev backend server
-yarn server start:dev
-
-# start dev backend server with debugging
-yarn server start:debug
-
-# start dev client server
-yarn client start
+npm start
 ```
+This will start the server and you can access the app at `http://localhost:3000` in your browser.
 
-You can check other scripts in `package.json` of the root repo and each package
+## Example Usage
+To test the app, open two browser windows and navigate to `http://localhost:3000`. Send a message from one window, and it should be received in real-time by the other window.
+
+## Contributing
+Feel free to fork the repo, make some changes, and submit a pull request. I'd love to see what you come up with!
